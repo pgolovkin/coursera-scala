@@ -6,34 +6,34 @@ import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 
 /**
- * This class implements a ScalaTest test suite for the methods in object
- * `Lists` that need to be implemented as part of this assignment. A test
+ * This class implements a ScalaTest main.scala.test suite for the methods in object
+ * `Lists` that need to be implemented as part of this assignment. A main.scala.test
  * suite is simply a collection of individual tests for some specific
  * component of a program.
  *
- * A test suite is created by defining a class which extends the type
+ * A main.scala.test suite is created by defining a class which extends the type
  * `org.scalatest.FunSuite`. When running ScalaTest, it will automatically
  * find this class and execute all of its tests.
  *
- * Adding the `@RunWith` annotation enables the test suite to be executed
- * inside eclipse using the built-in JUnit test runner.
+ * Adding the `@RunWith` annotation enables the main.scala.test suite to be executed
+ * inside eclipse using the built-in JUnit main.scala.test runner.
  *
- * You have two options for running this test suite:
+ * You have two options for running this main.scala.test suite:
  *
- * - Start the sbt console and run the "test" command
+ * - Start the sbt console and run the "main.scala.test" command
  * - Right-click this file in eclipse and chose "Run As" - "JUnit Test"
  */
  @RunWith(classOf[JUnitRunner])
   class ListsSuite extends FunSuite {
  
   /**
-   * Tests are written using the `test` operator which takes two arguments:
+   * Tests are written using the `main.scala.test` operator which takes two arguments:
    *
-   * - A description of the test. This description has to be unique, no two
+   * - A description of the main.scala.test. This description has to be unique, no two
    *   tests can have the same description.
-   * - The test body, a piece of Scala code that implements the test
+   * - The main.scala.test body, a piece of Scala code that implements the main.scala.test
    *
-   * The most common way to implement a test body is using the method `assert`
+   * The most common way to implement a main.scala.test body is using the method `assert`
    * which tests that its argument evaluates to `true`. So one of the simplest
    * successful tests is the following:
    */
@@ -52,8 +52,8 @@ import org.scalatest.junit.JUnitRunner
 
 
   /**
-   * One problem with the previous (failing) test is that ScalaTest will
-   * only tell you that a test failed, but it will not tell you what was
+   * One problem with the previous (failing) main.scala.test is that ScalaTest will
+   * only tell you that a main.scala.test failed, but it will not tell you what was
    * the reason for the failure. The output looks like this:
    *
    * {{{
@@ -62,7 +62,7 @@ import org.scalatest.junit.JUnitRunner
    *
    * This situation can be improved by using a special equality operator
    * `===` instead of `==` (this is only possible in ScalaTest). So if you
-   * run the next test, ScalaTest will show the following output:
+   * run the next main.scala.test, ScalaTest will show the following output:
    *
    * {{{
    *    [info] - details why one plus one is not three *** FAILED ***
@@ -76,10 +76,10 @@ import org.scalatest.junit.JUnitRunner
   }
 
   /**
-   * In order to test the exceptional behavior of a methods, ScalaTest offers
+   * In order to main.scala.test the exceptional behavior of a methods, ScalaTest offers
    * the `intercept` operation.
    *
-   * In the following example, we test the fact that the method `intNotZero`
+   * In the following example, we main.scala.test the fact that the method `intNotZero`
    * throws an `IllegalArgumentException` if its argument is `0`.
    */
   test("intNotZero throws an exception if its argument is 0") {
@@ -109,8 +109,8 @@ import org.scalatest.junit.JUnitRunner
    * In particular, write tests for corner cases: negative numbers, zeros,
    * empty lists, lists with repeated elements, etc.
    *
-   * It is allowed to have multiple `assert` statements inside one test,
-   * however it is recommended to write an individual `test` statement for
+   * It is allowed to have multiple `assert` statements inside one main.scala.test,
+   * however it is recommended to write an individual `main.scala.test` statement for
    * every tested aspect of a method.
    */
   test("sum of a few numbers") {

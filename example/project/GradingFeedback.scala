@@ -24,7 +24,7 @@ class GradingFeedback {
     * `failed` means that there was an unexpected error during grading. This includes
     * - student's code does not compile
     * - our tests don't compile (against the student's code)
-    * - crash while executing ScalaTest (not test failures, but problems trying to run the tests!)
+    * - crash while executing ScalaTest (not main.scala.test failures, but problems trying to run the tests!)
     * - crash while executing the style checker (again, not finding style problems!)
     *
     * When failed is `true`, later grading stages will not be executed: this is handled automatically
@@ -164,19 +164,19 @@ class GradingFeedback {
       |%.2f out of %.2f in our tests.
       |
       |In order to find bugs in your code, we advise to perform the following steps:
-      | - Take a close look at the test output that you can find below: it should point you to
+      | - Take a close look at the main.scala.test output that you can find below: it should point you to
       |   the part of your code that has bugs.
       | - Run the tests that we provide with the handout on your code.
-      | - The tests we provide do not test your code in depth: they are very incomplete. In order
-      |   to test more aspects of your code, write your own unit tests.
+      | - The tests we provide do not main.scala.test your code in depth: they are very incomplete. In order
+      |   to main.scala.test more aspects of your code, write your own unit tests.
       | - Take another very careful look at the assignment description. Try to find out if you
       |   misunderstood parts of it. While reading through the assignment, write more tests.
       |
-      |Below you can find a short feedback for every individual test that failed.""".stripMargin.format(score, maxTestScore)
+      |Below you can find a short feedback for every individual main.scala.test that failed.""".stripMargin.format(score, maxTestScore)
 
   // def so that we read the right value of vMaxTestScore (initialize modifies it)
   private def allTestsPassedMessage =
-    """Your solution passed all of our tests, congratulations! You obtained the maximal test
+    """Your solution passed all of our tests, congratulations! You obtained the maximal main.scala.test
       |score of %.2f.""".stripMargin.format(maxTestScore)
 
   private val testExecutionFailedMessage =
@@ -200,7 +200,7 @@ class GradingFeedback {
 }
 
 /**
-  * Logger to capture compiler output, test output
+  * Logger to capture compiler output, main.scala.test output
   */
 
 object RecordingLogger extends Logger {

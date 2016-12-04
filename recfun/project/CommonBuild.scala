@@ -14,7 +14,7 @@ import sbt._
   *                            NAME                               DEFAULT              DESCRIPTION
   *                            Xms                                10m                  -Xms for jvm
   *                            Xmx                                256m                 -Xmx for jvm, should less than `grader-memory`
-  *                            individualTimeout                  240                  time out of one test case
+  *                            individualTimeout                  240                  time out of one main.scala.test case
   *                            totalTimeout                       850                  total time out, should less than `grader-timeout`
   *                            grader-cpu                         1                    number of cpu for coursera infrastructure
   *                            grader-memory                      1024                 memory for coursera infrastructure

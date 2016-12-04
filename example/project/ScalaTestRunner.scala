@@ -111,7 +111,7 @@ object ScalaTestRunner {
       summaryProc.exitValue
     } catch {
       case e: Throwable =>
-        val msg = "Error occurred while running the test ScalaTest summary command\n" + e.toString
+        val msg = "Error occurred while running the main.scala.test ScalaTest summary command\n" + e.toString
         logError(msg)
         summaryProc.destroy()
         throw e
@@ -171,7 +171,7 @@ object ScalaTestRunner {
     // we don't specify "-w packageToTest" - the build file only compiles the tests
     // for the current project. so we don't need to do it again here.
 
-    // NOTICE: DON'T start test in parallel, it would break profiling. Check the
+    // NOTICE: DON'T start main.scala.test in parallel, it would break profiling. Check the
     // implementation of @InstrumentedSuite for more details.
     "java" ::
       s"-javaagent:$instragentPath" ::

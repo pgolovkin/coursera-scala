@@ -164,15 +164,15 @@ class GradingFeedback {
       |%.2f out of %.2f in our tests.
       |
       |In order to find bugs in your code, we advise to perform the following steps:
-      | - Take a close look at the test output that you can find below: it should point you to
+      | - Take a close look at the main.scala.test output that you can find below: it should point you to
       |   the part of your code that has bugs.
       | - Run the tests that we provide with the handout on your code.
-      | - The tests we provide do not test your code in depth: they are very incomplete. In order
-      |   to test more aspects of your code, write your own unit tests.
+      | - The tests we provide do not main.scala.test your code in depth: they are very incomplete. In order
+      |   to main.scala.test more aspects of your code, write your own unit tests.
       | - Take another very careful look at the assignment description. Try to find out if you
       |   misunderstood parts of it. While reading through the assignment, write more tests.
       |
-      |Below you can find a short feedback for every individual test that failed.""".stripMargin.format(score, maxTestScore)
+      |Below you can find a short feedback for every individual main.scala.test that failed.""".stripMargin.format(score, maxTestScore)
 
   // def so that we read the right value of vMaxTestScore (initialize modifies it)
   private def allTestsPassedMessage =
